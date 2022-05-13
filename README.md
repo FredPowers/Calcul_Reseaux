@@ -23,3 +23,10 @@ sources utilisées pour la création du script powershell :
 
 - padleft, padright : https://4sysops.com/archives/how-to-add-leading-and-ending-zeroes-to-strings-in-powershell/
  #>
+
+
+Screenshot :
+
+![2022-05-13 11_28_30-Window](https://user-images.githubusercontent.com/105367565/168255071-f7fae3aa-83ae-4bbf-ab89-fb848070f66d.png)
+
+![2022-05-13 11_28_51-Window](https://user-images.githubusercontent.com/105367565/168255160-26765251-0209-452a-8a3e-371fef800046.png)
