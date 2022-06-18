@@ -1,10 +1,10 @@
   <#  
 
 .NOTES
-	NAME: Calcul_réseaux.ps1
-	VERSION : 1.0  17/04/2022
-	VERSION : 1.1  18/06/2022
-	AUTHOR: Frédéric Puren
+	NAME:	Calcul_réseaux.ps1
+    VERSION : 1.0  17/04/2022
+    VERSION : 1.1  18/06/2022
+	AUTHOR:	Frédéric Puren
 
 
 1 - prend l'adresse IP du PC sur lequel il est lancé et calcul l'adresse IP du réseau, la première et la dernière adresse IP machine et l'adresse de broadcast.
@@ -764,7 +764,7 @@ write-host ""
     $InterfaceUp_VPN = Get-NetAdapter | where {$_.status -like "Up" -and $_.Name -notlike "VMware*" -and $_.Name -like "Connexion au réseau local*"} | select -ExpandProperty Name
     $Interface_VPN_Status = Get-NetAdapter | where {$_.status -like "Up" -and $_.Name -notlike "VMware*" -and $_.Name -like "Connexion au réseau local*"} | select -ExpandProperty Status
     $MasqueCIDR_VPN = get-netipaddress | where {$_.interfaceAlias -eq $InterfaceUp_VPN -and $_.AddressFamily -eq "IPv4"} | select -ExpandProperty PrefixLength
-    $Mac_VPN = Get-netadapter -Name $InterfaceUp_VPN | select -ExpandProperty MacAddress
+    $Mac_VPN = Get-netadapter -Name "$InterfaceUp_VPN" -ErrorAction SilentlyContinue | select -ExpandProperty MacAddress
     $DHCP_VPN = Get-NetIPInterface | where {$_.InterfaceAlias -eq $InterfaceUp_VPN -and $_.AddressFamily -eq "IPv4"} | select -ExpandProperty Dhcp
     $AdresseIP_VPN = Get-NetIPAddress | where {$_.interfaceAlias -eq $InterfaceUp_VPN -and $_.AddressFamily -eq "IPv4"} | select -ExpandProperty IPAddress
 
