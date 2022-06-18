@@ -1,10 +1,10 @@
   <#  
 
 .NOTES
-	NAME:	Calcul_réseaux.ps1
-    VERSION : 1.0  17/04/2022
-    VERSION : 1.1  18/06/2022
-	AUTHOR:	Frédéric Puren
+	NAME: Calcul_réseaux.ps1
+	VERSION : 1.0  17/04/2022
+	VERSION : 1.1  18/06/2022
+	AUTHOR: Frédéric Puren
 
 
 1 - prend l'adresse IP du PC sur lequel il est lancé et calcul l'adresse IP du réseau, la première et la dernière adresse IP machine et l'adresse de broadcast.
