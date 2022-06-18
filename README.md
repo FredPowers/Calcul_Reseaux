@@ -1,6 +1,17 @@
 # Calcul_Reseaux
 calculate network, first &amp; last IP with an host IP Address/mask + IP/binary converter
 
+.NOTES
+	NAME:	Calcul_réseaux.ps1
+    VERSION : 1.0  17/04/2022
+    VERSION : 1.1  18/06/2022
+	AUTHOR:	Frédéric Puren
+
+VERSION 1.1 :
+
+- Amélioration du script en intégrant une fonction pour le calcul réseau.
+- Ajout du scope d'adresse IP d'un second réseau si un VPN est connecté
+- 
 
 1 - prend l'adresse IP du PC sur lequel il est lancé et calcul l'adresse IP du réseau, la première et la dernière adresse IP machine et l'adresse de broadcast.
 2 - idem mais on rentre l'adresse IP et le masque sous-réseau que l'on souhaite
@@ -22,6 +33,8 @@ sources utilisées pour la création du script powershell :
 - extraire une chaine de caractère : https://www.it-connect.fr/powershell-et-substring-extraire-une-chaine-dune-chaine/
 
 - padleft, padright : https://4sysops.com/archives/how-to-add-leading-and-ending-zeroes-to-strings-in-powershell/
+
+- créer une fonction : https://techexpert.tips/fr/powershell-fr/powershell-creation-dune-fonction/
  #>
 
 
